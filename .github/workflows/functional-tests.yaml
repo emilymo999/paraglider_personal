@@ -71,7 +71,7 @@ jobs:
         with:
           ref: ${{ env.CHECKOUT_REF }}
       - name: Set up Go ${{ env.GOVER }}
-        uses: actions/setup-go@v5
+        uses: actions/setup-go@v6
         with:
           go-version: ${{ env.GOVER }}
       - name: Get protoc
