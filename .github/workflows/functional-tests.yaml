@@ -57,7 +57,7 @@ jobs:
         run: |
           echo "CHECKOUT_REF=${{ github.event.inputs.branch }}" >> $GITHUB_ENV
       - name: Add to check run
-        uses: LouisBrunner/checks-action@v2.0.0
+        uses: LouisBrunner/checks-action@v3.1.0
         if: always()
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -106,7 +106,7 @@ jobs:
         run: |
           make multicloud-test
       - name: Update check run with result
-        uses: LouisBrunner/checks-action@v2.0.0
+        uses: LouisBrunner/checks-action@v3.1.0
         if: always()
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
